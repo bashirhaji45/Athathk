@@ -1,5 +1,5 @@
 
-/* Firebase configuration for Athathak */
+/* Athathak Firebase Configuration */
 window.FIREBASE_CONFIG = {
   apiKey: "AIzaSyAwN4UZCZG1UjzTkBGp-fov6rzBLodwnMs",
   authDomain: "athathk-2c567.firebaseapp.com",
