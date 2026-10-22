@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أثاثك | أثاث يجعل بيتك أجمل</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<style>
+/* ألوان دافئة من الخشب والكريم، مع أخضر هادئ للتوازن */
+:root{--ink:#2B1D14;--wood:#5B3A29;--terra:#A84F2B;--sage:#4E6B50;--cream:#FAF5EC;--sand:#F0E5D2;--line:#E4D6BF;--mut:#6B5A4B}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.75 Tajawal,sans-serif;color:var(--ink);background:var(--cream)}
+:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h2,h3{margin:0;color:var(--wood)}
+/* رسومات الأثاث: a و b لونا القطعة، w خشب، l فاتح، s ظل */
+.a{fill:var(--a)}.b{fill:var(--b)}.w{fill:#5B3A29}.l{fill:#F6EDDD}.s{fill:#2B1D141F}
+
+header{background:#FAF5ECEE;backdrop-filter:blur(6px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.bar,.row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.bar{min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:26px;color:var(--wood);text-decoration:none}
+.logo svg{width:38px;height:28px}
+nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:10px 14px;min-height:44px;border-radius:10px;color:var(--mut);text-decoration:none;font-weight:500}
+nav a:hover{background:var(--sand)}
+nav a.on{color:var(--terra);background:var(--sand);font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:12px;border:2px solid transparent;font:700 16px Tajawal,sans-serif;cursor:pointer;text-decoration:none;transition:.15s}
+.btn:hover{transform:translateY(-1px)}
+.pri{background:var(--terra);color:#fff}.pri:hover{background:#8C3F20}
+.out{background:transparent;color:var(--wood);border-color:var(--wood)}.out:hover{background:var(--sand)}
+
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:56px}
+.tag{display:inline-block;background:var(--sand);color:var(--terra);font-weight:700;font-size:14px;padding:6px 14px;border-radius:20px;margin-bottom:14px}
+.hero h1{font-size:46px;line-height:1.3;margin:0 0 14px;font-weight:800;color:var(--wood)}
+.hero p{font-size:18px;color:var(--mut);margin:0 0 28px;max-width:480px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.scene{border-radius:28px;overflow:hidden;box-shadow:0 24px 50px #5B3A2930}
+.scene svg{display:block;width:100%;height:auto}
+
+section{padding:60px 0}
+.sec-h{text-align:center;max-width:620px;margin:0 auto 28px}
+.sec-h h2{font-size:32px;margin-bottom:8px}
+.sec-h p{margin:0;color:var(--mut)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.chip{min-height:44px;padding:0 20px;border-radius:24px;border:1.5px solid var(--line);background:#fff;color:var(--wood);font:500 15px Tajawal,sans-serif;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--wood);color:#fff;border-color:var(--wood);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.card:hover{box-shadow:0 14px 32px #5B3A2926;transform:translateY(-3px)}
+.pic{background:linear-gradient(#F6EDDD,#EBDCC4);padding:18px 18px 8px}
+.pic svg{display:block;width:100%;height:170px}
+.info{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.info h3{font-size:19px;margin-bottom:4px}
+.info p{margin:0 0 14px;color:var(--mut);font-size:15px;flex:1}
+.info .btn{min-height:44px;font-size:15px}
+
+.why{background:#fff}
+.pt{display:flex;gap:14px}
+.pt i{flex:none;width:44px;height:44px;border-radius:12px;background:var(--sand);color:var(--terra);display:grid;place-items:center;font-style:normal;font-weight:800}
+.pt h3{font-size:18px;margin-bottom:4px}.pt p{margin:0;color:var(--mut);font-size:15px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.step{background:var(--sage);color:#fff;border-radius:18px;padding:22px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--cream);color:var(--sage);font-weight:800;margin-bottom:12px}
+.step h3{color:#fff;font-size:17px;margin-bottom:4px}.step p{margin:0;color:#E3EEE3;font-size:14px}
+
+.price{font-weight:800;color:var(--terra);font-size:19px;margin-bottom:10px}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.cartbtn{position:relative}
+.badge{position:absolute;top:-6px;inset-inline-start:-6px;background:var(--terra);color:#fff;border-radius:12px;min-width:22px;height:22px;font:700 12px/22px Tajawal,sans-serif;text-align:center;padding:0 5px}
+.cartbox{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px}
+.item{display:grid;grid-template-columns:84px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.item:first-child{padding-top:0}.item:last-child{border:0;padding-bottom:0}
+.thumb{background:linear-gradient(#F6EDDD,#EBDCC4);border-radius:14px;padding:6px}
+.thumb svg{display:block;width:100%;height:58px}
+.item h3{font-size:16px}.item small{color:var(--mut)}
+.qty{display:inline-flex;align-items:center;gap:6px;margin-top:6px}
+.qty button{width:38px;height:38px;border-radius:10px;border:1.5px solid var(--line);background:#fff;font:700 18px Tajawal,sans-serif;cursor:pointer;color:var(--wood)}
+.qty button:hover{background:var(--sand)}
+.qty b{min-width:28px;text-align:center}
+.lt{text-align:left;font-weight:800;color:var(--wood)}
+.del{background:none;border:0;color:var(--mut);font:14px Tajawal,sans-serif;cursor:pointer;min-height:40px;text-decoration:underline}
+.empty{text-align:center;padding:40px 10px;color:var(--mut)}
+.r2{display:flex;justify-content:space-between;gap:10px;padding:8px 0}
+.tot{font-size:22px;font-weight:800;color:var(--wood);border-top:1px solid var(--line);margin-top:6px;padding-top:12px}
+.hint{font-size:13px;color:var(--mut);margin:12px 0 0}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--wood);color:#fff;padding:12px 20px;border-radius:14px;opacity:0;pointer-events:none;transition:.25s;z-index:50}
+#toast.on{opacity:1}
+footer{background:var(--wood);color:#E8D9C4;padding:30px 0;font-size:14px}
+footer .row{flex-wrap:wrap}
+@media(max-width:820px){.hero .wrap,.cartbox{grid-template-columns:1fr}.hero h1{font-size:34px}nav{display:none}.item{grid-template-columns:70px 1fr}.lt{grid-column:1/-1;text-align:right}}
+</style>
+</head>
+<body>
+
+<!-- مكتبة الرسومات: تُستخدم بـ <use> في أي مكان -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><ellipse id="sh" class="s" cx="100" cy="126" rx="84" ry="6"/></defs>
+  <symbol id="sofa" viewBox="0 0 200 140"><use href="#sh"/><rect class="b" x="34" y="40" width="132" height="52" rx="16"/><rect class="a" x="26" y="76" width="148" height="34" rx="10"/><rect class="b" x="12" y="62" width="30" height="52" rx="12"/><rect class="b" x="158" y="62" width="30" height="52" rx="12"/><rect class="a" x="44" y="50" width="50" height="30" rx="8"/><rect class="a" x="106" y="50" width="50" height="30" rx="8"/><rect class="w" x="30" y="112" width="7" height="12" rx="2"/><rect class="w" x="163" y="112" width="7" height="12" rx="2"/></symbol>
+  <symbol id="chair" viewBox="0 0 200 140"><use href="#sh"/><rect class="b" x="56" y="26" width="88" height="70" rx="20"/><rect class="a" x="62" y="40" width="76" height="40" rx="12"/><rect class="b" x="40" y="66" width="28" height="46" rx="12"/><rect class="b" x="132" y="66" width="28" height="46" rx="12"/><rect class="a" x="52" y="86" width="96" height="26" rx="10"/><rect class="w" x="54" y="110" width="7" height="14"/><rect class="w" x="139" y="110" width="7" height="14"/></symbol>
+  <symbol id="bed" viewBox="0 0 200 140"><use href="#sh"/><rect class="w" x="22" y="22" width="156" height="70" rx="10"/><rect class="b" x="30" y="30" width="140" height="40" rx="8"/><rect class="l" x="28" y="76" width="144" height="28" rx="8"/><rect class="l" x="38" y="62" width="48" height="20" rx="8"/><rect class="l" x="114" y="62" width="48" height="20" rx="8"/><rect class="a" x="28" y="88" width="144" height="24" rx="8"/><rect class="w" x="30" y="110" width="8" height="14"/><rect class="w" x="162" y="110" width="8" height="14"/></symbol>
+  <symbol id="ward" viewBox="0 0 200 140"><use href="#sh"/><rect class="w" x="48" y="10" width="104" height="110" rx="6"/><rect class="a" x="54" y="16" width="44" height="98" rx="3"/><rect class="a" x="102" y="16" width="44" height="98" rx="3"/><rect class="b" x="60" y="24" width="32" height="38" rx="2"/><rect class="b" x="108" y="24" width="32" height="38" rx="2"/><circle class="l" cx="92" cy="72" r="3"/><circle class="l" cx="108" cy="72" r="3"/><rect class="w" x="54" y="120" width="8" height="6"/><rect class="w" x="138" y="120" width="8" height="6"/></symbol>
+  <symbol id="dine" viewBox="0 0 200 140"><use href="#sh"/><rect class="a" x="34" y="62" width="132" height="10" rx="4"/><rect class="b" x="46" y="72" width="8" height="48" rx="2"/><rect class="b" x="146" y="72" width="8" height="48" rx="2"/><ellipse class="l" cx="100" cy="60" rx="16" ry="3"/><rect class="w" x="10" y="52" width="7" height="42" rx="2"/><rect class="w" x="10" y="88" width="24" height="6" rx="2"/><rect class="w" x="12" y="94" width="5" height="26"/><rect class="w" x="183" y="52" width="7" height="42" rx="2"/><rect class="w" x="166" y="88" width="24" height="6" rx="2"/><rect class="w" x="183" y="94" width="5" height="26"/></symbol>
+  <symbol id="desk" viewBox="0 0 200 140"><use href="#sh"/><rect class="a" x="26" y="66" width="148" height="9" rx="3"/><rect class="b" x="34" y="75" width="8" height="46" rx="2"/><rect class="b" x="118" y="75" width="46" height="42" rx="4"/><rect class="l" x="126" y="82" width="30" height="10" rx="2"/><rect class="l" x="126" y="98" width="30" height="10" rx="2"/><rect class="w" x="84" y="50" width="32" height="16" rx="2"/><rect class="w" x="48" y="36" width="3" height="30"/><path class="w" d="M38 38h24l-6-14H44z"/></symbol>
+  <symbol id="plant" viewBox="0 0 60 120"><rect class="w" x="18" y="88" width="24" height="28" rx="4"/><path fill="#5F8A5C" d="M30 88C8 72 12 40 30 18c18 22 22 54 0 70z"/><path fill="none" stroke="#3E6B3F" stroke-width="2" d="M30 88C24 62 28 40 30 18"/></symbol>
+  <symbol id="lamp" viewBox="0 0 60 160"><rect class="w" x="28" y="40" width="3" height="110"/><ellipse class="s" cx="30" cy="152" rx="16" ry="4"/><path fill="#F3D9A4" d="M10 40L22 8h16l12 32z"/></symbol>
+</svg>
+
+<header><div class="wrap bar">
+  <a class="logo" href="#top" aria-label="أثاثك الرئيسية"><svg viewBox="0 0 200 140" style="--a:#A84F2B;--b:#8C3F20" aria-hidden="true"><use href="#sofa"/></svg>أثاثك</a>
+  <nav aria-label="التنقل الرئيسي"><ul>
+    <li><a href="#top" class="on">الرئيسية</a></li><li><a href="#products">المنتجات</a></li><li><a href="#why">لماذا أثاثك</a></li><li><a href="#process">كيف نعمل</a></li><li><a href="#cart">السلة</a></li>
+  </ul></nav>
+  <div class="row" style="gap:8px"><a class="btn out cartbtn" href="#cart" aria-label="سلة الشراء" style="min-height:44px;padding:0 14px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg><span class="badge" id="badge" hidden>٠</span></a><span id="auth-links" style="display:contents"><a class="btn out" href="login.html" style="min-height:44px;padding:0 18px">دخول</a><a class="btn pri" href="signup.html" style="min-height:44px;padding:0 18px">حساب جديد</a></span></div>
+</div></header>
+
+<main id="top">
+  <div class="hero"><div class="wrap">
+    <div>
+      <span class="tag">أثاث لبيت تحبه</span>
+      <h1>قطع تُشعرك أن بيتك صار أجمل وأدفأ</h1>
+      <p>من غرفة المعيشة إلى غرفة النوم والمكتب، نساعدك على اختيار الأثاث الذي يناسب ذوقك ومساحتك.</p>
+      <div class="cta"><a class="btn pri" href="#products">تصفّح المنتجات</a><a class="btn out" href="#cart">سلة الشراء</a></div>
+    </div>
+    <div class="scene">
+      <svg viewBox="0 0 420 300" role="img" aria-label="غرفة معيشة فيها كنبة ومصباح ونبتة">
+        <rect fill="#F0E5D2" width="420" height="300"/><rect fill="#D9C3A0" y="236" width="420" height="64"/>
+        <rect x="150" y="36" width="120" height="76" rx="4" fill="#fff" stroke="#5B3A29" stroke-width="5"/>
+        <circle cx="200" cy="64" r="12" fill="#E9B872"/><path d="M158 106l36-30 28 20 20-14 24 24z" fill="#7C9A7E"/>
+        <ellipse cx="215" cy="262" rx="170" ry="14" fill="#C9A45C" opacity=".55"/>
+        <use href="#lamp" x="30" y="118" width="50" height="133"/>
+        <use href="#sofa" x="88" y="108" width="250" height="175" style="--a:#B5654A;--b:#8E4A33"/>
+        <use href="#plant" x="352" y="146" width="50" height="100"/>
+      </svg>
+    </div>
+  </div></div>
+
+  <section id="products" style="padding-top:20px"><div class="wrap">
+    <div class="sec-h"><h2>منتجاتنا</h2><p>اختر القسم الذي يهمّك وأضف ما يعجبك إلى السلة. الأسعار بالجنيه السوداني.</p></div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="prods"></div>
+  </div></section>
+
+  <section id="why" class="why"><div class="wrap">
+    <div class="sec-h"><h2>لماذا أثاثك؟</h2><p>نحب أن يكون اختيار الأثاث تجربة مريحة وممتعة.</p></div>
+    <div class="grid" id="whys"></div>
+  </div></section>
+
+  <section id="process"><div class="wrap">
+    <div class="sec-h"><h2>كيف نعمل معك؟</h2><p>ثلاث خطوات بسيطة من الفكرة إلى بيتك.</p></div>
+    <div class="steps" id="steps"></div>
+  </div></section>
+
+  <section id="cart" style="padding-top:0"><div class="wrap">
+    <div class="sec-h"><h2>سلة الشراء</h2><p>راجع قطعك ثم أرسل الطلب إلينا عبر واتساب.</p></div>
+    <div class="cartbox">
+      <div class="panel" id="items" aria-live="polite"></div>
+      <aside class="panel" aria-label="ملخص الطلب">
+        <h3 style="margin:0 0 8px">ملخص الطلب</h3>
+        <div class="r2"><span>عدد القطع</span><b id="cnt">٠</b></div>
+        <div class="r2"><span>التوصيل</span><span>يُتفق عليه عند التأكيد</span></div>
+        <div class="r2 tot"><span>الإجمالي</span><span id="tot">٠ ج.س</span></div>
+        <button class="btn pri" id="buy" style="width:100%;margin-top:14px" disabled>إرسال الطلب عبر واتساب</button>
+        <button class="del" id="clear" style="width:100%" hidden>تفريغ السلة</button>
+        <p class="hint">الأسعار بالجنيه السوداني، وتُؤكَّد عند استلام الطلب.</p>
+      </aside>
+    </div>
+  </div></section>
+  <div id="toast" role="status" aria-live="polite"></div>
+</main>
+
+<footer><div class="wrap row"><span>© أثاثك · جميع الحقوق محفوظة</span><span>بيتك يستحق الأجمل</span></div></footer>
+
+<script>
+const $=i=>document.getElementById(i), put=(id,a,fn)=>$(id).insertAdjacentHTML('beforeend',a.map(fn).join(''));
+const fmt=n=>n.toLocaleString('ar-EG')+' ج.س'; // تنسيق السعر بالجنيه السوداني
+// المنتجات: [القسم، الرسمة، الاسم، الوصف، اللون الأساسي، اللون الثانوي، السعر بالجنيه السوداني]
+// الأسعار أمثلة، عدّلها حسب أسعارك الفعلية
+const P=[
+['living','sofa','كنبة ثلاثية','جلسة مريحة تتسع لثلاثة أشخاص.','#B5654A','#8E4A33',950000],
+['living','chair','كرسي استرخاء','ركن هادئ للقراءة وشرب القهوة.','#C9A45C','#A3813A',380000],
+['bed','bed','سرير مزدوج','رأس سرير أنيق وهدوء لليل طويل.','#6F8F72','#4E6B50',1200000],
+['bed','ward','دولاب ملابس','مساحة منظمة بأبواب بسيطة.','#8A5A3B','#6B4428',1450000],
+['dining','dine','طاولة طعام','تجمع العائلة حول وجبة واحدة.','#A9744F','#6B4428',850000],
+['office','desk','مكتب عمل','مساحة مرتبة تساعدك على التركيز.','#7C8B99','#566471',520000]];
+const C=[['all','الكل'],['living','غرف المعيشة'],['bed','غرف النوم'],['dining','الطعام'],['office','المكاتب']];
+const W=[['نسمعك أولاً','نسأل عن ذوقك ومساحتك قبل أن نقترح.'],['خيارات تناسبك','ألوان وأشكال تناسب بيتك لا بيت غيرك.'],['كلام واضح','نشرح لك التفاصيل بلا تعقيد.'],['معك بعد الشراء','نتابع معك حتى ترضى عن قطعتك.']];
+const S=[['تختار','تتصفح المنتجات وتخبرنا بما يعجبك.'],['نتفق','نتواصل معك ونحدد المقاس واللون.'],['يصلك','نجهّز قطعتك وتصل إلى بيتك.']];
+
+put('chips',C,c=>`<button class="chip" data-c="${c[0]}" aria-pressed="${c[0]=='all'}">${c[1]}</button>`);
+put('prods',P,(p,i)=>`<article class="card" data-c="${p[0]}"><div class="pic"><svg viewBox="0 0 200 140" style="--a:${p[4]};--b:${p[5]}" role="img" aria-label="${p[2]}"><use href="#${p[1]}"/></svg></div><div class="info"><h3>${p[2]}</h3><p>${p[3]}</p><div class="price">${fmt(p[6])}</div><button class="btn pri" data-add="${i}">أضف إلى السلة</button></div></article>`);
+put('whys',W,(w,i)=>`<div class="pt"><i>${'١٢٣٤'[i]}</i><div><h3>${w[0]}</h3><p>${w[1]}</p></div></div>`);
+put('steps',S,s=>`<div class="step"><h3>${s[0]}</h3><p>${s[1]}</p></div>`);
+
+// تصفية المنتجات حسب القسم
+$('chips').onclick=e=>{
+  const b=e.target.closest('.chip'); if(!b)return;
+  document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x==b));
+  document.querySelectorAll('.card').forEach(c=>c.hidden=b.dataset.c!='all'&&c.dataset.c!=b.dataset.c);
+};
+
+// ===== سلة الشراء =====
+const WHATSAPP='249000000000'; // رقم واتساب المتجر بالصيغة الدولية بدون + (غيّره إلى رقمك)
+let cart={}; try{cart=JSON.parse(localStorage.getItem('ath-cart')||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem('ath-cart',JSON.stringify(cart))}catch(e){}};
+const lines=()=>Object.keys(cart).filter(i=>P[i]&&cart[i]>0);
+
+function render(){
+  const ids=lines(), count=ids.reduce((n,i)=>n+cart[i],0), total=ids.reduce((n,i)=>n+cart[i]*P[i][6],0);
+  $('badge').textContent=count.toLocaleString('ar-EG'); $('badge').hidden=!count;
+  $('cnt').textContent=count.toLocaleString('ar-EG'); $('tot').textContent=fmt(total);
+  $('buy').disabled=!count; $('clear').hidden=!count;
+  $('items').innerHTML=ids.length?ids.map(i=>{const p=P[i];return `<div class="item"><div class="thumb"><svg viewBox="0 0 200 140" style="--a:${p[4]};--b:${p[5]}" aria-hidden="true"><use href="#${p[1]}"/></svg></div><div><h3>${p[2]}</h3><small>${fmt(p[6])} للقطعة</small><div class="qty"><button data-a="dec" data-i="${i}" aria-label="إنقاص الكمية">−</button><b>${cart[i].toLocaleString('ar-EG')}</b><button data-a="inc" data-i="${i}" aria-label="زيادة الكمية">+</button></div></div><div><div class="lt">${fmt(cart[i]*p[6])}</div><button class="del" data-a="del" data-i="${i}">حذف</button></div></div>`}).join('')
+    :'<div class="empty"><strong>سلتك فارغة</strong><p>تصفّح المنتجات وأضف ما يعجبك.</p><a class="btn out" href="#products">تصفّح المنتجات</a></div>';
+}
+let tm;
+const toast=t=>{const e=$('toast');e.textContent=t;e.classList.add('on');clearTimeout(tm);tm=setTimeout(()=>e.classList.remove('on'),1800)};
+const change=(i,d)=>{cart[i]=Math.min(99,(cart[i]||0)+d);if(cart[i]<=0)delete cart[i];save();render()};
+
+document.addEventListener('click',e=>{
+  const add=e.target.closest('[data-add]');
+  if(add){change(add.dataset.add,1);toast('أُضيفت «'+P[add.dataset.add][2]+'» إلى السلة');return}
+  const b=e.target.closest('[data-a]'); if(!b)return;
+  const i=b.dataset.i; b.dataset.a=='del'?(delete cart[i],save(),render()):change(i,b.dataset.a=='inc'?1:-1);
+});
+$('clear').onclick=()=>{cart={};save();render()};
+$('buy').onclick=()=>{
+  const ids=lines(); if(!ids.length)return;
+  const total=ids.reduce((n,i)=>n+cart[i]*P[i][6],0);
+  const text='السلام عليكم، أودّ طلب:\n'+ids.map(i=>`• ${P[i][2]} × ${cart[i]} = ${fmt(cart[i]*P[i][6])}`).join('\n')+'\nالإجمالي: '+fmt(total);
+  window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(text),'_blank','noopener');
+};
+render();
+
+// تمييز القسم الحالي في القائمة
+const links=document.querySelectorAll('nav a');
+const io=new IntersectionObserver(en=>en.forEach(x=>x.isIntersecting&&links.forEach(l=>l.classList.toggle('on',l.hash=='#'+x.target.id))),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('main,section[id]').forEach(s=>io.observe(s));
+</script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script defer src="js/firebase-config.js"></script>
+<script defer src="js/firebase-init.js"></script>
+<script defer src="js/session.js"></script>
+</body>
+</html>
