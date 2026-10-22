@@ -1,42 +1,26 @@
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js";
-import {
-  getAuth,
-  setPersistence,
-  browserLocalPersistence,
-  browserSessionPersistence,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  updateProfile,
-  sendPasswordResetEmail,
-  GoogleAuthProvider,
-  signInWithPopup
-} from "https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js";
+/* Athathak Firebase initialization — Compat SDK */
+(function () {
+  try {
+    const c = window.FIREBASE_CONFIG;
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAwN4UZCZG1UjzTkBGp-fov6rzBLodwnMs",
-  authDomain: "athathk-2c567.firebaseapp.com",
-  projectId: "athathk-2c567",
-  storageBucket: "athathk-2c567.firebasestorage.app",
-  messagingSenderId: "383362239941",
-  appId: "1:383362239941:web:ffe7a48407f3386682cfac",
-  measurementId: "G-9RG2H48QFJ"
-};
+    if (!window.firebase || !c || !c.apiKey ||
+        c.apiKey === "YOUR_API_KEY" ||
+        c.apiKey.startsWith("YOUR_")) {
+      window.authStatus = "nofirebase";
+      console.error("Firebase configuration missing.");
+      return;
+    }
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-auth.languageCode = "ar";
+    if (!firebase.apps.length) {
+      firebase.initializeApp(c);
+    }
 
-export {
-  app,
-  auth,
-  setPersistence,
-  browserLocalPersistence,
-  browserSessionPersistence,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  updateProfile,
-  sendPasswordResetEmail,
-  GoogleAuthProvider,
-  signInWithPopup
-};
+    window.auth = firebase.auth();
+    window.auth.languageCode = "ar";
+    window.authStatus = "ready";
+  } catch (error) {
+    window.authStatus = "init";
+    console.error("Firebase initialization failed:", error);
+  }
+})();
