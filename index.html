@@ -203,7 +203,7 @@ $('chips').onclick=e=>{
 };
 
 // ===== سلة الشراء =====
-const WHATSAPP='249000000000'; // رقم واتساب المتجر بالصيغة الدولية بدون + (غيّره إلى رقمك)
+const WHATSAPP='+249116862914'; // رقم واتساب المتجر بالصيغة الدولية بدون + (غيّره إلى رقمك)
 let cart={}; try{cart=JSON.parse(localStorage.getItem('ath-cart')||'{}')}catch(e){}
 const save=()=>{try{localStorage.setItem('ath-cart',JSON.stringify(cart))}catch(e){}};
 const lines=()=>Object.keys(cart).filter(i=>P[i]&&cart[i]>0);
