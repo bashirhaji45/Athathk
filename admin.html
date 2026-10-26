@@ -1,1 +1,35 @@
-
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لوحة المدير | أثاثك</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<style>
+:root{--wood:#5B3A29;--terra:#A84F2B;--cream:#FAF5EC;--line:#E4D6BF;--mut:#6B5A4B}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.7 Tajawal,sans-serif;background:var(--cream);color:#2B1D14}
+header{background:var(--wood);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+header a{color:#fff;font-weight:700}
+main{max-width:900px;margin:0 auto;padding:20px}
+h2{color:var(--wood);margin:24px 0 10px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:8px 18px}
+.r{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.r:last-child{border:0}
+small,.s{color:var(--mut)}
+.b{min-height:44px;padding:0 16px;border-radius:10px;border:0;font:700 15px Tajawal,sans-serif;cursor:pointer;color:#fff}
+.ok{background:#2E7D4F}.no{background:#B3261E}.b:disabled{opacity:.5}
+@media(max-width:600px){.r{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><strong>لوحة المدير — أثاثك</strong><a href="index.html">العودة للموقع</a></header>
+<main id="app"><div class="card">جارٍ التحميل...</div></main>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script defer src="js/firebase-config.js"></script>
+<script defer src="js/firebase-init.js"></script>
+<script defer src="js/admin.js"></script>
+</body>
+</html>
