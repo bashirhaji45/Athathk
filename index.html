@@ -117,4 +117,149 @@ footer .row{flex-wrap:wrap}
   <symbol id="dine" viewBox="0 0 200 140"><use href="#sh"/><rect class="a" x="34" y="62" width="132" height="10" rx="4"/><rect class="b" x="46" y="72" width="8" height="48" rx="2"/><rect class="b" x="146" y="72" width="8" height="48" rx="2"/><ellipse class="l" cx="100" cy="60" rx="16" ry="3"/><rect class="w" x="10" y="52" width="7" height="42" rx="2"/><rect class="w" x="10" y="88" width="24" height="6" rx="2"/><rect class="w" x="12" y="94" width="5" height="26"/><rect class="w" x="183" y="52" width="7" height="42" rx="2"/><rect class="w" x="166" y="88" width="24" height="6" rx="2"/><rect class="w" x="183" y="94" width="5" height="26"/></symbol>
   <symbol id="desk" viewBox="0 0 200 140"><use href="#sh"/><rect class="a" x="26" y="66" width="148" height="9" rx="3"/><rect class="b" x="34" y="75" width="8" height="46" rx="2"/><rect class="b" x="118" y="75" width="46" height="42" rx="4"/><rect class="l" x="126" y="82" width="30" height="10" rx="2"/><rect class="l" x="126" y="98" width="30" height="10" rx="2"/><rect class="w" x="84" y="50" width="32" height="16" rx="2"/><rect class="w" x="48" y="36" width="3" height="30"/><path class="w" d="M38 38h24l-6-14H44z"/></symbol>
   <symbol id="plant" viewBox="0 0 60 120"><rect class="w" x="18" y="88" width="24" height="28" rx="4"/><path fill="#5F8A5C" d="M30 88C8 72 12 40 30 18c18 22 22 54 0 70z"/><path fill="none" stroke="#3E6B3F" stroke-width="2" d="M30 88C24 62 28 40 30 18"/></symbol>
-  <symbol id="lamp" viewBox="0 0 60 160"><rect class="w" x="28" y="40" width="3"
+  <symbol id="lamp" viewBox="0 0 60 160"><rect class="w" x="28" y="40" width="3" height="110"/><ellipse class="s" cx="30" cy="152" rx="16" ry="4"/><path fill="#F3D9A4" d="M10 40L22 8h16l12 32z"/></symbol>
+</svg>
+
+<header><div class="wrap bar">
+  <a class="logo" href="#top" aria-label="أثاثك الرئيسية"><svg viewBox="0 0 200 140" style="--a:#A84F2B;--b:#8C3F20" aria-hidden="true"><use href="#sofa"/></svg>أثاثك</a>
+  <nav aria-label="التنقل الرئيسي"><ul>
+    <li><a href="#top" class="on">الرئيسية</a></li><li><a href="#products">المنتجات</a></li><li><a href="#why">لماذا أثاثك</a></li><li><a href="#process">كيف نعمل</a></li><li><a href="#wallet">المحفظة</a></li><li><a href="#cart">السلة</a></li>
+  </ul></nav>
+  <div class="row" style="gap:8px"><a class="btn out cartbtn" href="#cart" aria-label="سلة الشراء" style="min-height:44px;padding:0 14px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg><span class="badge" id="badge" hidden>٠</span></a><span id="auth-links" style="display:contents"><a class="btn out" href="login.html" style="min-height:44px;padding:0 18px">دخول</a><a class="btn pri" href="signup.html" style="min-height:44px;padding:0 18px">حساب جديد</a></span></div>
+</div></header>
+
+<main id="top">
+  <div class="hero"><div class="wrap">
+    <div>
+      <span class="tag">أثاث لبيت تحبه</span>
+      <h1>قطع تُشعرك أن بيتك صار أجمل وأدفأ</h1>
+      <p>من غرفة المعيشة إلى غرفة النوم والمكتب، نساعدك على اختيار الأثاث الذي يناسب ذوقك ومساحتك.</p>
+      <div class="cta"><a class="btn pri" href="#products">تصفّح المنتجات</a><a class="btn out" href="#cart">سلة الشراء</a></div>
+    </div>
+    <div class="scene">
+      <svg viewBox="0 0 420 300" role="img" aria-label="غرفة معيشة فيها كنبة ومصباح ونبتة">
+        <rect fill="#F0E5D2" width="420" height="300"/><rect fill="#D9C3A0" y="236" width="420" height="64"/>
+        <rect x="150" y="36" width="120" height="76" rx="4" fill="#fff" stroke="#5B3A29" stroke-width="5"/>
+        <circle cx="200" cy="64" r="12" fill="#E9B872"/><path d="M158 106l36-30 28 20 20-14 24 24z" fill="#7C9A7E"/>
+        <ellipse cx="215" cy="262" rx="170" ry="14" fill="#C9A45C" opacity=".55"/>
+        <use href="#lamp" x="30" y="118" width="50" height="133"/>
+        <use href="#sofa" x="88" y="108" width="250" height="175" style="--a:#B5654A;--b:#8E4A33"/>
+        <use href="#plant" x="352" y="146" width="50" height="100"/>
+      </svg>
+    </div>
+  </div></div>
+
+  <section id="products" style="padding-top:20px"><div class="wrap">
+    <div class="sec-h"><h2>منتجاتنا</h2><p>اختر القسم الذي يهمّك وأضف ما يعجبك إلى السلة. الأسعار بالجنيه السوداني.</p></div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="prods"></div>
+  </div></section>
+
+  <section id="why" class="why"><div class="wrap">
+    <div class="sec-h"><h2>لماذا أثاثك؟</h2><p>نحب أن يكون اختيار الأثاث تجربة مريحة وممتعة.</p></div>
+    <div class="grid" id="whys"></div>
+  </div></section>
+
+  <section id="process"><div class="wrap">
+    <div class="sec-h"><h2>كيف نعمل معك؟</h2><p>ثلاث خطوات بسيطة من الفكرة إلى بيتك.</p></div>
+    <div class="steps" id="steps"></div>
+  </div></section>
+
+  <section id="wallet" style="padding-top:0"><div class="wrap">
+    <div class="sec-h"><h2>محفظتي</h2><p>اشحن رصيدك ثم اشترِ بخصم مباشر منه.</p></div>
+    <div id="wallet-body"><div class="panel empty">جارٍ التحميل...</div></div>
+  </div></section>
+
+  <section id="cart" style="padding-top:0"><div class="wrap">
+    <div class="sec-h"><h2>سلة الشراء</h2><p>راجع قطعك ثم اشترِ بخصم المبلغ من رصيدك.</p></div>
+    <div class="cartbox">
+      <div class="panel" id="items" aria-live="polite"></div>
+      <aside class="panel" aria-label="ملخص الطلب">
+        <h3 style="margin:0 0 8px">ملخص الطلب</h3>
+        <div class="r2"><span>عدد القطع</span><b id="cnt">٠</b></div>
+        <div class="r2"><span>التوصيل</span><span>نتواصل معك لتأكيده</span></div>
+        <div class="r2 tot"><span>الإجمالي</span><span id="tot">٠ ج.س</span></div>
+        <div class="r2"><span>رصيدك</span><b id="balRow">—</b></div>
+        <label for="ordPhone">رقم هاتفك للتواصل</label><input class="in" id="ordPhone" type="tel" inputmode="tel" autocomplete="tel">
+        <label for="ordAddr">عنوان التسليم</label><input class="in" id="ordAddr" autocomplete="street-address" placeholder="المدينة والحي">
+        <button class="btn pri" id="buy" style="width:100%;margin-top:14px" disabled>اشترِ الآن</button>
+        <div id="buymsg" aria-live="polite"></div>
+        <button class="del" id="clear" style="width:100%" hidden>تفريغ السلة</button>
+        <p class="hint">عند الشراء يُخصم الإجمالي من رصيدك مباشرة. الأسعار بالجنيه السوداني.</p>
+      </aside>
+    </div>
+  </div></section>
+  <div id="toast" role="status" aria-live="polite"></div>
+</main>
+
+<footer><div class="wrap row"><span>© أثاثك · جميع الحقوق محفوظة</span><span>بيتك يستحق الأجمل</span></div></footer>
+
+<script>
+const $=i=>document.getElementById(i), put=(id,a,fn)=>$(id).insertAdjacentHTML('beforeend',a.map(fn).join(''));
+const fmt=n=>n.toLocaleString('ar-EG')+' ج.س'; // تنسيق السعر بالجنيه السوداني
+// المنتجات: [القسم، الرسمة، الاسم، الوصف، اللون الأساسي، اللون الثانوي، السعر بالجنيه السوداني]
+// الأسعار أمثلة، عدّلها حسب أسعارك الفعلية
+const P=[
+['living','sofa','كنبة ثلاثية','جلسة مريحة تتسع لثلاثة أشخاص.','#B5654A','#8E4A33',950000],
+['living','chair','كرسي استرخاء','ركن هادئ للقراءة وشرب القهوة.','#C9A45C','#A3813A',380000],
+['bed','bed','سرير مزدوج','رأس سرير أنيق وهدوء لليل طويل.','#6F8F72','#4E6B50',1200000],
+['bed','ward','دولاب ملابس','مساحة منظمة بأبواب بسيطة.','#8A5A3B','#6B4428',1450000],
+['dining','dine','طاولة طعام','تجمع العائلة حول وجبة واحدة.','#A9744F','#6B4428',850000],
+['office','desk','مكتب عمل','مساحة مرتبة تساعدك على التركيز.','#7C8B99','#566471',520000]];
+const C=[['all','الكل'],['living','غرف المعيشة'],['bed','غرف النوم'],['dining','الطعام'],['office','المكاتب']];
+const W=[['نسمعك أولاً','نسأل عن ذوقك ومساحتك قبل أن نقترح.'],['خيارات تناسبك','ألوان وأشكال تناسب بيتك لا بيت غيرك.'],['كلام واضح','نشرح لك التفاصيل بلا تعقيد.'],['معك بعد الشراء','نتابع معك حتى ترضى عن قطعتك.']];
+const S=[['تختار','تتصفح المنتجات وتخبرنا بما يعجبك.'],['نتفق','نتواصل معك ونحدد المقاس واللون.'],['يصلك','نجهّز قطعتك وتصل إلى بيتك.']];
+
+put('chips',C,c=>`<button class="chip" data-c="${c[0]}" aria-pressed="${c[0]=='all'}">${c[1]}</button>`);
+put('prods',P,(p,i)=>`<article class="card" data-c="${p[0]}"><div class="pic"><svg viewBox="0 0 200 140" style="--a:${p[4]};--b:${p[5]}" role="img" aria-label="${p[2]}"><use href="#${p[1]}"/></svg></div><div class="info"><h3>${p[2]}</h3><p>${p[3]}</p><div class="price">${fmt(p[6])}</div><button class="btn pri" data-add="${i}">أضف إلى السلة</button></div></article>`);
+put('whys',W,(w,i)=>`<div class="pt"><i>${'١٢٣٤'[i]}</i><div><h3>${w[0]}</h3><p>${w[1]}</p></div></div>`);
+put('steps',S,s=>`<div class="step"><h3>${s[0]}</h3><p>${s[1]}</p></div>`);
+
+// تصفية المنتجات حسب القسم
+$('chips').onclick=e=>{
+  const b=e.target.closest('.chip'); if(!b)return;
+  document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x==b));
+  document.querySelectorAll('.card').forEach(c=>c.hidden=b.dataset.c!='all'&&c.dataset.c!=b.dataset.c);
+};
+
+// ===== سلة الشراء =====
+let cart={}; try{cart=JSON.parse(localStorage.getItem('ath-cart')||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem('ath-cart',JSON.stringify(cart))}catch(e){}};
+const lines=()=>Object.keys(cart).filter(i=>P[i]&&cart[i]>0);
+
+function render(){
+  const ids=lines(), count=ids.reduce((n,i)=>n+cart[i],0), total=ids.reduce((n,i)=>n+cart[i]*P[i][6],0);
+  $('badge').textContent=count.toLocaleString('ar-EG'); $('badge').hidden=!count;
+  $('cnt').textContent=count.toLocaleString('ar-EG'); $('tot').textContent=fmt(total);
+  $('buy').disabled=!count; $('clear').hidden=!count;
+  $('items').innerHTML=ids.length?ids.map(i=>{const p=P[i];return `<div class="item"><div class="thumb"><svg viewBox="0 0 200 140" style="--a:${p[4]};--b:${p[5]}" aria-hidden="true"><use href="#${p[1]}"/></svg></div><div><h3>${p[2]}</h3><small>${fmt(p[6])} للقطعة</small><div class="qty"><button data-a="dec" data-i="${i}" aria-label="إنقاص الكمية">−</button><b>${cart[i].toLocaleString('ar-EG')}</b><button data-a="inc" data-i="${i}" aria-label="زيادة الكمية">+</button></div></div><div><div class="lt">${fmt(cart[i]*p[6])}</div><button class="del" data-a="del" data-i="${i}">حذف</button></div></div>`}).join('')
+    :'<div class="empty"><strong>سلتك فارغة</strong><p>تصفّح المنتجات وأضف ما يعجبك.</p><a class="btn out" href="#products">تصفّح المنتجات</a></div>';
+}
+let tm;
+const toast=t=>{const e=$('toast');e.textContent=t;e.classList.add('on');clearTimeout(tm);tm=setTimeout(()=>e.classList.remove('on'),1800)};
+const change=(i,d)=>{cart[i]=Math.min(99,(cart[i]||0)+d);if(cart[i]<=0)delete cart[i];save();render()};
+
+document.addEventListener('click',e=>{
+  const add=e.target.closest('[data-add]');
+  if(add){change(add.dataset.add,1);toast('أُضيفت «'+P[add.dataset.add][2]+'» إلى السلة');return}
+  const b=e.target.closest('[data-a]'); if(!b)return;
+  const i=b.dataset.i; b.dataset.a=='del'?(delete cart[i],save(),render()):change(i,b.dataset.a=='inc'?1:-1);
+});
+$('clear').onclick=()=>{cart={};save();render()};
+window.shop={P,fmt,toast,lines,getCart:()=>cart,clear:()=>{cart={};save();render()}};   // تستخدمها wallet.js
+$('buy').onclick=()=>toast('جارٍ تحميل خدمة الدفع...');
+render();
+
+// تمييز القسم الحالي في القائمة
+const links=document.querySelectorAll('nav a');
+const io=new IntersectionObserver(en=>en.forEach(x=>x.isIntersecting&&links.forEach(l=>l.classList.toggle('on',l.hash=='#'+x.target.id))),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('main,section[id]').forEach(s=>io.observe(s));
+</script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script defer src="js/firebase-config.js"></script>
+<script defer src="js/firebase-init.js"></script>
+<script defer src="js/wallet.js"></script>
+</body>
+</html>
